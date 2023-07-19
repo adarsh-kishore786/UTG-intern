@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encoding Simulator</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="util.js" defer></script>
+    <script src="encoder.js" defer></script>
+    <script src="encode_simulate.js" defer></script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1 style="color: #fff;">Encoder Simulator</h1>
+    </div>
+    <input type="file" id="jsonFileInput">
+    <button id="upload_button">Upload and Read JSON</button>
+    <button id="simulate">Simulate</button>
+    <div id="container" style="display: flex; flex-direction: row; gap: 10px">
+        <div id="pixel-array">
+        </div>
+
+        <div id="hash-array">
+        </div>
+    </div>
+    <div id="container" class="qoi-chunks">
+        
+    <div>
+    <div style="display: flex; gap: 30px">
+        <button id="download-json">Download JSON</button>
+    </div>
+</body>
+</html>

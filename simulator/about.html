@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>About Page</title>
+  <link rel="stylesheet" href="styles.css">
+  
+
+</head>
+<body>
+    <img class="qoi-image" src="https://static.designandreuse.com/news_img2/homepage51962/qoib.jpg" alt="QOI Image">
+    <a href="index.html">
+        <button class="commons home">Home</button>
+    </a>
+    <a href="about.html">
+        <button class="commons about">About</button>
+    </a>
+    <a href="contact_us.html">
+        <button class="commons contact-us">Contact</button>
+    </a>
+  <h1>About</h1>
+  <p>Welcome to our QOI simulator! We are a team of passionate individuals on image compression techniques.</p>
+
+  <h2>Techniques used</h2>
+  <p>Our mission is to perform lossless compression with better performance compared to existing lossless image compression techniques like png.<br>
+    <br> We basically used 4 techniques in order to compress the pixel buffer into a qoi buffer.  
+  </p>
+
+  
+  <div class="container-list">
+    <div class="container">
+      <span>A run of the previous pixel</span>
+      <div class="hidden-content" id="content">
+        Here we start by storing a pixel and then we iterate over the pixels following our current pixel.
+
+        We also keep track of a counter that stores the count of same pixels we have seen with out any break in between, i.e. we increment the counter until we see a pixel different from our currently stored pixel.<br>
+
+        Instead of storing every pixel, we are storing the pixel and number of times it is repeated continuously in the image
+      </div>
+    </div>
+    <div class="container">
+      <span>Index into an array of previously seen pixels</span>
+      <div class="hidden-content" id="content">
+        We do this when the previous technique doesn't handle the current pixel.
+
+        Using a hash function over r, g, b and a, our pixel points to an index of the array[64],
+
+        where previously seen pixel values are maintained in this.
+
+        We check if the pixel at that array location matches our current pixel.
+
+        If so, we write this index position to the stream.
+
+        <br>
+
+        Hash Function: index_position = (r * 3 + g * 5 + b * 7 + a * 11) % 64
+      </div>
+    </div>
+    <div class="container">
+      <span>Difference to the previous pixel value in r,g,b</span>
+      <div class="hidden-content" id="content">
+        When the previous two ways fail, we try this technique.
+
+        To follow this technique, we need the 'a' of both previous and current pixels to be same.
+
+        We find difference between the r, g, and b values of current pixel and the previous pixel.
+
+        If the difference is in between '-2' and '1' (inclusive) we store that difference into the stream.
+      </div>
+    </div>
+    <div class="container">
+        <span>Full r,g,b or r,g,b,a values</span>
+        <div class="hidden-content" id="content">
+          This is the last option, and if every thing above fails we store the full pixel value.
+
+has context menu
+        </div>
+      </div>
+  </div>
+  </body>
+</html>

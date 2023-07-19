@@ -1,0 +1,244 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url("https://cdn.wallpapersafari.com/99/34/Xm19kO.jpg");
+    background-color: darkslategrey;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #5c41d3;
+}
+
+.qoi-image {
+    max-width: 50px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.about {
+    position: absolute;
+    top: 10px;
+    right: 130px;
+}
+
+.img-gen {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.contact-us {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.home {
+    position: absolute;
+    top: 10px;
+    right: 250px;
+}
+
+.container {
+    width: 220px;
+    height: 120px;
+    background-color: rgb(232, 236, 112);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+
+  .container-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container:hover {
+    transform: scale(1.05);
+  }
+
+
+  .container:hover .hidden-content {
+    display: block;
+  }
+
+  .hidden-content {
+    display: none;
+    padding: 0px;
+    background-color: rgb(139, 221, 240);
+    font-weight: bold;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  p {
+    color: #fafbf5;
+  }
+
+  .container_contact_us {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 100px;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+
+#hash-array, #pixel-array {
+    border: 2px solid #000;
+    margin: 20px;
+    padding: 10px;
+}
+
+.hash-button, .pixel-button {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    outline: none;
+    border: none;
+    transition: 1s;
+}
+
+.hash-button {
+    width: 30px;
+    height: 30px;
+}
+
+.pixel-button:hover {
+    transform: scale(1.3);
+}
+
+.pixel-button-active {
+    transform: scale(1.1);
+    box-shadow: #000 0 0 2px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#color-picker {
+    margin: 20px;
+    padding: 0;
+    outline: none;
+    border: 0;
+    font-size: 30px;
+    color: #fff;
+}
+
+#container.qoi-chunks{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: .5em;
+}
+
+.t-red{
+    color: red;
+}
+
+.t-blue{
+    color: blue;
+}
+
+.t-green{
+    color: green;
+}
+
+.t-white{
+    color: white;
+}
+
+.qoi-chunk{
+    border:3px solid black;
+    width: fit-content;
+    padding: .5em;
+}
+
+#preload-image, #download-json {
+    padding: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+    font-size: 20px;
+    background-color: #300a24;
+    color: #fff;
+}
+
+#preload-image:hover, #download-json:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.commons {
+    padding: 12px 24px;
+    background-color: #c6c91c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
